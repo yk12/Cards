@@ -1,0 +1,88 @@
+// compileCompressed: ../../../build/assets/css/main.css﻿
+/*------Tools-------*/
+@import 'tools/normalize'
+@import 'tools/bourbon/bourbon'
+@import 'tools/fontawesome/font-awesome'
+
+/*------Config-------*/
+@import 'config/fonts'
+@import 'config/vars'
+
+/*-----Modules-----*/
+
+
+body
+  margin: 0
+  background-color: $secondaryColor
+  overflow-x: hidden
+
+.cards
+  margin: 20px auto
+  padding: 0
+  width: 65%
+  overflow: hidden
+
+  .card1
+    box-sizing: content-box
+    position: relative
+    margin: 20px
+    width: calc(50% - 40px)
+    float: left
+    height: auto
+    box-shadow: 0 0 5px #ddd
+
+    img
+      max-width: 100%
+      height: auto
+      float: left
+
+    .text
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      background-color: rgba(255, 255, 255, 0.7)
+      padding: 10px
+      font-family: Fira sans
+
+      h1
+        font-size: 16px
+        padding: 0
+        margin: 0
+
+      p
+        font-size: 14px
+        padding: 0
+        margin: 0
+
+@media (max-width: 1000px)
+  .cards
+    .card1
+      p
+        display: none
+
+@media (max-width: 600px)
+
+  .cards
+    width: 75%
+
+    .card1
+      position: static
+      width: calc(100% - 40px)
+      float: left
+
+      img
+        padding: 0
+        margin: 0
+        float: left
+
+      .text
+        position: static
+        float: left
+        width: calc(100% - 20px)
+        margin: 0
+        background-color: #eee
+        font-family: Fira sans
+
+        p
+          display: none
